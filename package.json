@@ -3,9 +3,13 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start"
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "source venv/bin/activate && LOCATION='local' py.test && deactivate",
+    "appium": "appium",
+    "appium:doctor": "appium-doctor"
   },
   "dependencies": {
+    "appium-chromedriver": "^4.10.1",
     "react": "16.6.3",
     "react-native": "^0.57.8",
     "react-native-vector-icons": "^6.2.0",
@@ -15,6 +19,15 @@
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
-    "jest": "^24.0.0"
+    "appium": "^1.10.1",
+    "appium-doctor": "^1.8.0",
+    "babel-jest": "21.0.2",
+    "babel-preset-react-native": "3.0.2",
+    "jest": "^24.0.0",
+    "react-test-renderer": "16.0.0-alpha.12",
+    "wd": "^1.4.0"
+  },
+  "jest": {
+    "preset": "react-native"
   }
 }

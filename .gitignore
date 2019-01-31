@@ -91,3 +91,6 @@ android/.gradle/4.6/fileHashes/fileHashes.lock
 android/.idea/workspace.xml
 android/.gradle/
 android/.idea
+venv/
+__tests__/__pycache__/conftest.cpython-27-PYTEST.pyc
+__tests__/__pycache__/test_main.cpython-27-PYTEST.pyc

@@ -45,7 +45,7 @@ export default class App extends Component {
   render() {
     if (this.state.greeting) return this.renderAfterButton();
     return (
-      <View testID="welcome" style={{ flex: 1, paddingTop: 20, justifyContent: 'center', alignItems: 'center' }}>
+      <View accessibilityLabel="testview" testID="welcome" style={{ flex: 1, paddingTop: 20, justifyContent: 'center', alignItems: 'center' }}>
         <Text style={{ fontSize: 25, marginBottom: 30 }}>Welcome</Text>
         <TouchableOpacity testID="hello_button" onPress={this.onButtonPress.bind(this, 'Hello')}>
           <Text style={{ color: 'blue', marginBottom: 20 }}>Say Hello</Text>
@@ -58,7 +58,7 @@ export default class App extends Component {
   }
   renderAfterButton() {
     return (
-      <View style={{ flex: 1, paddingTop: 20, justifyContent: 'center', alignItems: 'center' }}>
+      <View accessibilityLabel="testview" style={{ flex: 1, paddingTop: 20, justifyContent: 'center', alignItems: 'center' }}>
         <Text style={{ fontSize: 25 }}>{this.state.greeting}!!!</Text>
       </View>
     );
